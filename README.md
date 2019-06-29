@@ -60,8 +60,11 @@ These docs are inspired by reactjs-popup docs
 
 | Option               | Default           | Type           | Description                                                                                                                                                                                                                                                           |
 | -------------------- | ----------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| align              | center                  | {string}    | The way you want to align your items (`align-items`)                                                                                                                                                                                                            |
+| align              | center                  | {string}    | The way you want to align your items (`align-items`)
 | col                 | 1                  | {string}         | How many columns you have within your grid
+| as                 | div                  | {string, Component}         | https://www.styled-components.com/docs/api#as-polymorphic-prop
+| className                 |                   | {string}         | you can add a className and style the component the way you wish
+| style                 |                   | {object}         | you can pass in CSS in JS directly
 
 ### Item
 
@@ -73,6 +76,9 @@ These docs are inspired by reactjs-popup docs
 | colMobile                 | 1                  | {string}         | How many columns of 12 your item will take on mobile
 | marginBottom              | `3rem`                  | {string}    | Margin bottom of your item, last item always has 0 on mobile
 | stretch                 | false                  | {bool}         | Whether you want the items to have the same height or not
+| as                 | div                  | {string, Component}         | https://www.styled-components.com/docs/api#as-polymorphic-prop
+| className                 |                   | {string}         | you can add a className and style the component the way you wish
+| style                 |                   | {object}         | you can pass in CSS in JS directly
 
 ## Built with
 
@@ -85,6 +91,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Contributors
 
 - [Myself](https://smakosh.com)
+- [Abdullah Hilson](https://github.com/abumalick)
+
+## Todo
+
+- [ ] convert CSS in JS to vanilla CSS and remove styled-components
+- [ ] Migrate to TypeScript
 
 ## Support
 
