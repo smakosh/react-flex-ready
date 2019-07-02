@@ -21,36 +21,7 @@ Or
 yarn add react-flex-ready
 ```
 
-```jsx
-import React from "react";
-import { render } from "react-dom";
-import { Flex, Item } from "react-flex-ready";
-
-const myList = [{ title: "first" }, { title: "second" }, { title: "third" }];
-
-const Demo = () => (
-    <div>
-        <h1>Example</h1>
-        <Flex>
-            {myList.map(({ title }, i) => (
-                <Item key={i} col="3" colTablet="3" colMobile="1" stretch>
-                  <div
-                    style={{
-                      textAlign: "center",
-                      width: "100%",
-                      border: "1px solid #eee"
-                    }}
-                  >
-                        <h1>{title}</h1>
-                    </div>
-                </Item>
-            ))}
-        </Flex>
-    </div>
-);
-
-render(<Demo />, document.querySelector("#root"));
-```
+[See Example](https://codesandbox.io/s/react-flex-ready-example-q6fdg)
 
 ## Props
 
@@ -61,7 +32,9 @@ These docs are inspired by reactjs-popup docs
 | Option               | Default           | Type           | Description                                                                                                                                                                                                                                                           |
 | -------------------- | ----------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | align              | center                  | {string}    | The way you want to align your items (`align-items`)
-| col                 | 1                  | {string}         | How many columns you have within your grid
+| col                 |                  | {number}         | depends if you have like 5 elements and each one takes 4 out of 12 of space, will explain this more on a blog post
+| colTablet                 |                  | {number}         | Same as col but on Tablet
+| colMobile                 |                  | {number}         | Same as col but on Mobile
 | as                 | div                  | {string, Component}         | https://www.styled-components.com/docs/api#as-polymorphic-prop
 | className                 |                   | {string}         | you can add a className and style the component the way you wish
 | style                 |                   | {object}         | you can pass in CSS in JS directly
@@ -70,11 +43,11 @@ These docs are inspired by reactjs-popup docs
 
 | Option               | Default           | Type           | Description                                                                                                                                                                                                                                                           |
 | -------------------- | ----------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| col              | 1                  | {string}    | How many columns of 12 your item will take on desktop                                                                                                                                                                                                            |
-| col                 | 1                  | {string}         | How many columns you have within your grid
-| colTablet              | 1                  | {string}    | How many columns of 12 your item will take on tablet
-| colMobile                 | 1                  | {string}         | How many columns of 12 your item will take on mobile
-| marginBottom              | `3rem`                  | {string}    | Margin bottom of your item, last item always has 0 on mobile
+| gap              | 1                  | {number}    | The gap value between your elements, 1 is highly recommended (it's not valid when your element takes 12 out of 12 of space)
+| col              | 1                  | {number}    | How many columns out of 12 your item will take on desktop
+| colTablet              | 1                  | {number}    | How many columns out of 12 your item will take on tablet
+| colMobile                 | 1                  | {number}         | How many columns out of 12 your item will take on mobile
+| marginBottom              | `10px` on mobile                  | {number}    | Margin bottom of your item, last item always has 0 on mobile
 | stretch                 | false                  | {bool}         | Whether you want the items to have the same height or not
 | as                 | div                  | {string, Component}         | https://www.styled-components.com/docs/api#as-polymorphic-prop
 | className                 |                   | {string}         | you can add a className and style the component the way you wish
