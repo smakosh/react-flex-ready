@@ -2,7 +2,7 @@ sudo: false
 
 language: node_js
 node_js:
-  - 8
+  - 12
 
 cache:
   directories:
@@ -11,7 +11,7 @@ notifications:
   email: false
 
 before_install:
-  - npm install codecov.io coveralls
+  - npm i && npm i codecov.io coveralls
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js

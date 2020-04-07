@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "styled-components": "^4.3.2"
+    "styled-components": "^5.1.0"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -32,7 +32,7 @@
     "nwb": "^0.23.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "semantic-release": "^15.13.18",
+    "semantic-release": "^17.0.4",
     "travis-deploy-once": "^5.0.11"
   },
   "author": "smakosh",
