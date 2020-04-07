@@ -6,6 +6,20 @@
 
 - Running `npm install` in the component's root directory will install everything you need for development.
 
+### Commit Messages
+
+Commit messages should follow the following pattern:
+
+- `chore: ....`
+- `docs: ....`
+- `feat: ....`
+- `fix: ....`
+- `refactor: ....`
+- `style: ....`
+- `test: ....`
+
+You can learn more about [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
 ## Demo Development Server
 
 - `npm start` will run a development server with the component's demo app at [http://localhost:3000](http://localhost:3000) with hot module reloading.
