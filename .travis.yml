@@ -4,6 +4,9 @@ language: node_js
 node_js:
   - 12
 
+install:
+  - yarn
+
 cache:
   directories:
     - ~/.npm
@@ -11,13 +14,13 @@ notifications:
   email: false
 
 before_install:
-  - npm i && npm i codecov.io coveralls
+  - yarn && yarn add codecov.io coveralls
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-  - npm run build
-  - npm run travis-deploy-once "npm run semantic-release"
+  - yarn run build
+  - yarn run travis-deploy-once "yarn run semantic-release"
 
 branches:
   only:
