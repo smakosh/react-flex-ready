@@ -1,4 +1,4 @@
-[
+export default [
   {
     "columns": 1
   },

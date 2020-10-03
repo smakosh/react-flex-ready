@@ -1,48 +1,71 @@
 {
-  "name": "react-flex-ready",
-  "version": "0.0.0-development",
-  "description": "react-flex-ready React component",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
+    "dist",
+    "src"
   ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
-    "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "prepublishOnly": "npm run build",
-    "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server",
-    "travis-deploy-once": "travis-deploy-once",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
     "semantic-release": "semantic-release"
   },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "styled-components": "^5.1.0"
-  },
   "peerDependencies": {
-    "react": "16.x"
+    "react": ">=16"
   },
-  "devDependencies": {
-    "nwb": "^0.23.x",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "semantic-release": "^17.0.4",
-    "travis-deploy-once": "^5.0.11"
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
   },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "react-flex-ready",
   "author": "smakosh",
-  "homepage": "https://github.com/smakosh/react-flex-ready.git",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/smakosh/react-flex-ready.git"
+  "module": "dist/react-flex-ready.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-flex-ready.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-flex-ready.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@size-limit/preset-small-lib": "^4.6.0",
+    "@types/react": "^16.9.50",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.3",
+    "babel-loader": "^8.1.0",
+    "husky": "^4.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "semantic-release": "^17.1.2",
+    "size-limit": "^4.6.0",
+    "travis-deploy-once": "^5.0.11",
+    "tsdx": "^0.14.0",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.3"
   },
-  "keywords": [
-    "react-component"
-  ]
+  "dependencies": {
+    "styled-components": "^5.2.0"
+  }
 }
