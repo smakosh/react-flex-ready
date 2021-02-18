@@ -41,11 +41,11 @@
   "size-limit": [
     {
       "path": "dist/react-flex-ready.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "16 KB"
     },
     {
       "path": "dist/react-flex-ready.esm.js",
-      "limit": "10 KB"
+      "limit": "16 KB"
     }
   ],
   "devDependencies": {
