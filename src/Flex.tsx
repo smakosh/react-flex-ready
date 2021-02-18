@@ -1,7 +1,9 @@
+import * as React from 'react';
 import styled from 'styled-components';
 import { FlexProps } from './interfaces';
+import Item from './Item';
 
-const Flex = styled.div<FlexProps>`
+const StyledFlex = styled.div<Omit<FlexProps, 'total'>>`
   display: flex;
   justify-content: ${({ justifyContent }) => justifyContent || 'space-between'};
   flex-wrap: wrap;
@@ -28,5 +30,35 @@ const Flex = styled.div<FlexProps>`
     }
   }
 `;
+
+const Flex: React.FC<FlexProps> = ({
+  children,
+  col,
+  colTablet,
+  colMobile,
+  gap,
+  gabTablet,
+  gapMobile,
+  align,
+  justifyContent,
+  className,
+  style,
+}) => (
+  <StyledFlex
+    col={col}
+    colTablet={colTablet}
+    colMobile={colMobile}
+    gap={gap}
+    gabTablet={gabTablet}
+    gapMobile={gapMobile}
+    align={align}
+    justifyContent={justifyContent}
+    className={className}
+    style={style}
+  >
+    {children}
+    <Item col={col} colTablet={colTablet} colMobile={colMobile} />
+  </StyledFlex>
+);
 
 export default Flex;

@@ -14,7 +14,7 @@ export interface ItemProps extends HTMLAttributes<HTMLDivElement> {
   style?: object;
 }
 
-export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
+export interface FlexProps {
   gap?: number;
   gabTablet?: number;
   gapMobile?: number;
@@ -23,7 +23,6 @@ export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   col?: number;
   colTablet?: number;
   colMobile?: number;
-  as?: string | Component;
   className?: string;
   style?: object;
 }
