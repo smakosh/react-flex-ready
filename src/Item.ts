@@ -13,9 +13,9 @@ const Item = styled.div<ItemProps>`
 	`}
 
   @media (max-width: 960px) {
-    max-width: ${({ colTablet, gabTablet = 1 }) =>
+    max-width: ${({ colTablet, gapTablet = 1 }) =>
       colTablet && colTablet < 12
-        ? `${(100 * colTablet) / 12 - gabTablet}%`
+        ? `${(100 * colTablet) / 12 - gapTablet}%`
         : '100%'};
     margin-bottom: ${({ marginBottom = 10 }) => `${marginBottom}px`};
   }
