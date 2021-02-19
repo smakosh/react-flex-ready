@@ -16,9 +16,9 @@ const StyledFlex = styled.div<Omit<FlexProps, 'total'>>`
     width: 100%;
 
     @media (max-width: 960px) {
-      max-width: ${({ colTablet, gabTablet = 1 }) =>
+      max-width: ${({ colTablet, gapTablet = 1 }) =>
         colTablet && colTablet < 12
-          ? `${(100 * colTablet) / 12 - gabTablet}%`
+          ? `${(100 * colTablet) / 12 - gapTablet}%`
           : '100%'};
     }
 
@@ -37,7 +37,7 @@ const Flex: React.FC<FlexProps> = ({
   colTablet,
   colMobile,
   gap,
-  gabTablet,
+  gapTablet,
   gapMobile,
   align,
   justifyContent,
@@ -49,7 +49,7 @@ const Flex: React.FC<FlexProps> = ({
     colTablet={colTablet}
     colMobile={colMobile}
     gap={gap}
-    gabTablet={gabTablet}
+    gapTablet={gapTablet}
     gapMobile={gapMobile}
     align={align}
     justifyContent={justifyContent}
@@ -57,7 +57,14 @@ const Flex: React.FC<FlexProps> = ({
     style={style}
   >
     {children}
-    <Item col={col} colTablet={colTablet} colMobile={colMobile} />
+    <Item
+      col={col}
+      colTablet={colTablet}
+      colMobile={colMobile}
+      gap={gap}
+      gapTablet={gapTablet}
+      gapMobile={gapMobile}
+    />
   </StyledFlex>
 );
 

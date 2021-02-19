@@ -2,7 +2,7 @@ import { HTMLAttributes, Component } from 'react';
 
 export interface ItemProps extends HTMLAttributes<HTMLDivElement> {
   gap?: number;
-  gabTablet?: number;
+  gapTablet?: number;
   gapMobile?: number;
   col?: number;
   colTablet?: number;
@@ -16,7 +16,7 @@ export interface ItemProps extends HTMLAttributes<HTMLDivElement> {
 
 export interface FlexProps {
   gap?: number;
-  gabTablet?: number;
+  gapTablet?: number;
   gapMobile?: number;
   align?: string;
   justifyContent?: string;
