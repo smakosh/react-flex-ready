@@ -25,4 +25,5 @@ export interface FlexProps {
   colMobile?: number;
   className?: string;
   style?: object;
+  as?: string | Component;
 }
