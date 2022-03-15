@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Flex, Item } from '../.';
+import { Flex, Item, Range } from '../.';
 import myList from './example';
 
 const App = () => (
@@ -12,8 +12,8 @@ const App = () => (
     }}
   >
     <h1>Example</h1>
-    <Flex col={4} total={myList.length}>
-      {myList.map(({ columns }, i: number) => (
+    <Flex col={4}>
+      {myList.map(({ columns }: { columns: Range }, i: number) => (
         <Item
           key={i}
           col={columns}
@@ -36,7 +36,6 @@ const App = () => (
         </Item>
       ))}
     </Flex>
-    <h2>Hello</h2>
   </div>
 );
 
