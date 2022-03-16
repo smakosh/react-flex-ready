@@ -1,0 +1,166 @@
+import Link from "next/link";
+import { Flex, Item } from "react-flex-ready";
+import myList from "../list";
+
+# Getting Started
+
+## Installation
+
+Inside your React project directory, run the following:
+
+```plaintext
+yarn add react-flex-ready
+```
+
+Or with npm:
+
+```plaintext
+npm install react-flex-ready
+```
+
+## Features
+
+- TypeScript support
+- Flexbox ready
+- Easy to use
+- Easy to customize
+
+## Simple example
+
+<Flex col={6}>
+  <Item col={6} colTablet={6} colMobile={12} gap={1} marginBottom={30} stretch>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>6 Columns</p>
+    </div>
+  </Item>
+  <Item col={6} colTablet={6} colMobile={12} gap={1} marginBottom={30} stretch>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>6 Columns</p>
+    </div>
+  </Item>
+</Flex>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={6}>
+    <Item
+      col={6}
+      colTablet={6}
+      colMobile={12}
+      gap={1}
+      marginBottom={30}
+      stretch
+    >
+      <div
+        style={{
+          textAlign: "center",
+          width: "100%",
+          border: "1px solid #eee",
+          background: "#eee"
+        }}
+      >
+        <p>6 Columns</p>
+      </div>
+    </Item>
+    <Item
+      col={6}
+      colTablet={6}
+      colMobile={12}
+      gap={1}
+      marginBottom={30}
+      stretch
+    >
+      <div
+        style={{
+          textAlign: "center",
+          width: "100%",
+          border: "1px solid #eee",
+          background: "#eee"
+        }}
+      >
+        <p>6 Columns</p>
+      </div>
+    </Item>
+  </Flex>
+);
+```
+
+## Advanced example
+
+<br />
+<Flex col={4}>
+  {myList.map(({ columns }, i) => (
+    <Item
+      key={i}
+      col={columns}
+      colTablet={6}
+      colMobile={12}
+      gap={1}
+      marginBottom={30}
+      stretch
+    >
+      <div
+        style={{
+          textAlign: "center",
+          width: "100%",
+          border: "1px solid #eee",
+          background: "#eee"
+        }}
+      >
+        <p>{columns}</p>
+      </div>
+    </Item>
+  ))}
+</Flex>
+
+```jsx
+import myList from "some-list";
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={4}>
+    {myList.map(({ columns }, i) => (
+      <Item
+        key={i}
+        col={columns}
+        colTablet={6}
+        colMobile={12}
+        gap={1}
+        marginBottom={30}
+        stretch
+      >
+        <div
+          style={{
+            textAlign: "center",
+            width: "100%",
+            border: "1px solid #eee",
+            background: "#eee"
+          }}
+        >
+          <p>{columns}</p>
+        </div>
+      </Item>
+    ))}
+  </Flex>
+);
+```
+
+## Sandbox
+
+[CodeSandbox](https://codesandbox.io/s/react-flex-ready-example-q6fdg)

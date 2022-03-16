@@ -1,0 +1,22 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
+  },
+  "dependencies": {
+    "next": "^10.0.3",
+    "nextra": "^1.1.0",
+    "nextra-theme-docs": "^1.2.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-flex-ready": "^1.2.9"
+  },
+  "prettier": {
+    "embeddedLanguageFormatting": "off",
+    "htmlWhitespaceSensitivity": "strict"
+  }
+}
