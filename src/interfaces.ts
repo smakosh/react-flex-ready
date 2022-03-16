@@ -4,8 +4,8 @@ export type Range = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 export interface ItemProps extends HTMLAttributes<HTMLDivElement> {
   gap?: number;
-  gapTablet?: Range;
-  gapMobile?: Range;
+  gapTablet?: number;
+  gapMobile?: number;
   col: Range;
   colTablet?: Range;
   colMobile?: Range;
@@ -18,8 +18,8 @@ export interface ItemProps extends HTMLAttributes<HTMLDivElement> {
 
 export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   gap?: number;
-  gapTablet?: Range;
-  gapMobile?: Range;
+  gapTablet?: number;
+  gapMobile?: number;
   align?:
     | 'center'
     | 'flex-start'
