@@ -4,3 +4,9 @@ node_modules
 .cache
 dist
 .vscode
+docs/node_modules
+docs/.cache
+docs/.next
+example/node_modules
+example/.cache
+example/dist
