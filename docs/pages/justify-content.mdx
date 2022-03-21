@@ -1,0 +1,399 @@
+import Link from "next/link";
+import { Flex, Item } from "react-flex-ready";
+import myList from "../list";
+
+# Examples
+
+## Justify Content
+
+Utilities for controlling how flex and grid items are positioned along a container's main axis.
+
+| Name            | Properties                       |
+| --------------- | -------------------------------- |
+| `center`        | `justify-content: center;`       |
+| `flex-start`    | `justify-content: flex-start;`   |
+| `flex-end`      | `justify-content: flex-end;`     |
+| `space-between` | `justify-content: flex-between;` |
+| `space-around`  | `justify-content: flex-around;`   |
+| `space-evenly`  | `justify-content: flex-evenly;`   |
+
+## Basic usage
+
+### Start
+
+<div style={{marginBottom:"30px"}}>
+<Flex col={12} justifyContent='flex-start'>
+  <Item col={4} colTablet={4} colMobile={4} style={{marginRight: "10px"}}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+</div>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={12} justifyContent='flex-start' gap={1}>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+);
+```
+### Center
+
+<div style={{marginBottom:"30px"}}>
+<Flex col={12} justifyContent='center'>
+  <Item col={4} colTablet={4} colMobile={4} style={{marginRight: "10px"}}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+</div>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={12} justifyContent='center' gap={1}>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+);
+```
+### End
+
+<div style={{marginBottom:"30px"}}>
+<Flex col={12} justifyContent='flex-end'>
+  <Item col={4} colTablet={4} colMobile={4} style={{marginRight: "10px"}}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+</div>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={12} justifyContent='flex-end' gap={1}>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+);
+```
+### Space between
+
+<div style={{marginBottom:"30px"}}>
+<Flex col={12} justifyContent='space-between'>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+</div>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={12} justifyContent='space-between'>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+);
+```
+### Space around
+
+<div style={{marginBottom:"30px"}}>
+<Flex col={12} justifyContent='space-around'>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+</div>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={12} justifyContent='space-around'>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+);
+```
+### Space evenly
+
+<div style={{marginBottom:"30px"}}>
+<Flex col={12} justifyContent='space-evenly'>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+</div>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={12} justifyContent='space-evenly'>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee",
+      }}
+    >
+      <p>01</p>
+    </div>
+  </Item>
+  <Item col={4} colTablet={4} colMobile={4}>
+    <div
+      style={{
+        textAlign: "center",
+        width: "100%",
+        border: "1px solid #eee",
+        background: "#eee"
+      }}
+    >
+      <p>02</p>
+    </div>
+  </Item>
+</Flex>
+);
+```
