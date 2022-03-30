@@ -1,0 +1,120 @@
+import Link from "next/link";
+import Callout from 'nextra-theme-docs/callout'
+import { Flex, Item } from "react-flex-ready";
+import Card from '../components/Card';
+
+# Examples
+
+#### 5 cards where each card takes 4 columns on Desktop, 6 columns on Tablet and 12 columns on Mobile
+
+<br />
+
+<Flex col={4} colTablet={6} colMobile={12} gap={1}>
+  {Array.from({ length: 5 }).map((_, i) => (
+    <Item
+      key={i}
+      col={4}
+      colTablet={6}
+      colMobile={12}
+      gap={1}
+      marginBottom={30}
+    >
+      <Card
+        title="Title"
+        description="This is a long description"
+        image="https://images.unsplash.com/photo-1648498257879-f5b88a5eb93e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+      />
+    </Item>
+  ))}
+</Flex>
+
+<Callout type="warning">
+  Notice that we passed the same props to the `Flex` component so that the last card will be positioned correctly.
+</Callout>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex col={4} colTablet={6} colMobile={12} gap={1}>
+    {Array.from({ length: 5 }).map((_, i) => (
+      <Item
+        key={i}
+        col={4}
+        colTablet={6}
+        colMobile={12}
+        gap={1}
+        marginBottom={30}
+      >
+        <Card
+          title="Title"
+          description="This is a long description"
+          image="https://images.unsplash.com/photo-1648498257879-f5b88a5eb93e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+        />
+      </Item>
+    ))}
+  </Flex>
+);
+```
+
+#### 3 cards where each card takes 4 columns on Desktop, 6 columns on Tablet and 12 columns on Mobile and are stretched
+
+<br />
+
+<Flex>
+  {Array.from({ length: 3 }).map((_, i) => (
+    <Item
+      key={i}
+      col={4}
+      colTablet={6}
+      colMobile={12}
+      gap={1}
+      marginBottom={30}
+      stretch
+    >
+      <Card
+        title="Title"
+        description={
+          i === 1
+            ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+            : "This is a long description"
+        }
+        image="https://images.unsplash.com/photo-1563976983312-56098c0fd936?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+      />
+    </Item>
+  ))}
+</Flex>
+
+<Callout type="warning">
+  Notice that the cards are stretched to fill the available space. That's why `stretch` is set to `true` in the `Item` component.
+</Callout>
+
+```jsx
+import { Flex, Item } from "react-flex-ready";
+
+const YourApp = () => (
+  <Flex>
+    {Array.from({ length: 3 }).map((_, i) => (
+      <Item
+        key={i}
+        col={4}
+        colTablet={6}
+        colMobile={12}
+        gap={1}
+        marginBottom={30}
+        stretch
+      >
+        <Card
+          title="Title"
+          description={
+            i === 1
+              ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              : "This is a long description"
+          }
+          image="https://images.unsplash.com/photo-1563976983312-56098c0fd936?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+        />
+      </Item>
+    ))}
+  </Flex>
+);
+```
