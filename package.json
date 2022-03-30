@@ -1,6 +1,6 @@
 {
   "name": "react-flex-ready",
-  "version": "1.2.8",
+  "version": "1.3.0",
   "license": "MIT",
   "author": "smakosh",
   "module": "dist/react-flex-ready.esm.js",

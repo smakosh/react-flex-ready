@@ -11,12 +11,16 @@ export default {
   customSearch: null,
   darkMode: false,
   footer: true,
-  footerText: "MIT 2022 © Smakosh",
+  footerText: `MIT ${new Date().getFullYear()} © Smakosh`,
   footerEditOnGitHubLink: true, // will link to the docs repo
   logo: (
     <>
-      <span>React-flex-ready -</span>
-      <span> A Flexbox grid ready, easy to implement and customize</span>
+      <span className="mr-2 font-extrabold hidden md:inline">
+        React Flex Ready
+      </span>
+      <span className="text-gray-600 font-normal hidden md:inline">
+        A Flexbox grid ready, easy to implement and customize
+      </span>
     </>
   ),
   head: (
@@ -31,5 +35,5 @@ export default {
         content="React-flex-ready: A Flexbox grid ready, easy to implement and customize"
       />
     </>
-  )
+  ),
 };

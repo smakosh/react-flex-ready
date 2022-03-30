@@ -8,13 +8,13 @@ import myList from "../list";
 
 Inside your React project directory, run the following:
 
-```plaintext
+```bash
 yarn add react-flex-ready
 ```
 
 Or with npm:
 
-```plaintext
+```bash
 npm install react-flex-ready
 ```
 
@@ -27,7 +27,7 @@ npm install react-flex-ready
 
 ## Simple example
 
-<Flex col={6}>
+<Flex>
   <Item col={6} colTablet={6} colMobile={12} gap={1} marginBottom={30} stretch>
     <div
       style={{
@@ -58,15 +58,8 @@ npm install react-flex-ready
 import { Flex, Item } from "react-flex-ready";
 
 const YourApp = () => (
-  <Flex col={6}>
-    <Item
-      col={6}
-      colTablet={6}
-      colMobile={12}
-      gap={1}
-      marginBottom={30}
-      stretch
-    >
+  <Flex>
+    <Item col={6} colTablet={6} colMobile={12} gap={1} marginBottom={30} stretch>
       <div
         style={{
           textAlign: "center",
@@ -78,14 +71,7 @@ const YourApp = () => (
         <p>6 Columns</p>
       </div>
     </Item>
-    <Item
-      col={6}
-      colTablet={6}
-      colMobile={12}
-      gap={1}
-      marginBottom={30}
-      stretch
-    >
+    <Item col={6} colTablet={6} colMobile={12} gap={1} marginBottom={30} stretch>
       <div
         style={{
           textAlign: "center",
@@ -104,7 +90,12 @@ const YourApp = () => (
 ## Advanced example
 
 <br />
-<Flex col={4}>
+<Flex
+  col={4}
+  colTablet={6}
+  colMobile={12}
+  gap={1}
+>
   {myList.map(({ columns }, i) => (
     <Item
       key={i}
@@ -134,7 +125,12 @@ import myList from "some-list";
 import { Flex, Item } from "react-flex-ready";
 
 const YourApp = () => (
-  <Flex col={4}>
+  <Flex
+    col={4}
+    colTablet={6}
+    colMobile={12}
+    gap={1}
+  >
     {myList.map(({ columns }, i) => (
       <Item
         key={i}
