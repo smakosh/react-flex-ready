@@ -12,7 +12,6 @@ const Flex: React.FC<FlexProps> = ({
   gapTablet,
   gapMobile,
   align,
-  justifyContent,
   className,
   style,
 }) => (
@@ -24,7 +23,6 @@ const Flex: React.FC<FlexProps> = ({
     gapTablet={gapTablet}
     gapMobile={gapMobile}
     align={align}
-    justifyContent={justifyContent}
     className={className}
     style={style}
   >

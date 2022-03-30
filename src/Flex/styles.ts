@@ -3,7 +3,7 @@ import { FlexProps } from '../interfaces';
 
 export const StyledFlex = styled.div<FlexProps>`
   display: flex;
-  justify-content: ${({ justifyContent }) => justifyContent || 'space-between'};
+  justify-content: 'space-between';
   flex-wrap: wrap;
   align-items: ${({ align }) => align || 'center'};
 

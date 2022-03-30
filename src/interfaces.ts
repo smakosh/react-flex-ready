@@ -20,18 +20,7 @@ export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   gap?: number;
   gapTablet?: number;
   gapMobile?: number;
-  align?:
-    | 'center'
-    | 'flex-start'
-    | 'flex-end'
-    | 'space-between'
-    | 'space-around';
-  justifyContent?:
-    | 'center'
-    | 'flex-start'
-    | 'flex-end'
-    | 'space-between'
-    | 'space-around';
+  align?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
   col?: Range;
   colTablet?: Range;
   colMobile?: Range;
